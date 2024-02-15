@@ -1,0 +1,18 @@
+[package]
+name = "aidecomment"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust crate that can get the OpenAPI operation summary and description from doc comments and provide them to aide"
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.75"
+quote = "1.0.35"
+syn = { version = "2.0.48", features = ["full"] }
+
+[dev-dependencies]
+aide = { version = "0.13.2", default-features = false, features = ["axum"] }
+axum = { version = "0.7.4", default-features = false, features = ["macros"] }
